@@ -3,14 +3,20 @@ package com.saksham.customloadingdialog
 import android.content.Context
 
 private var customLoader: CustomLoader? = null
-fun showDialog(context: Context?, cancelable: Boolean, animation: Int) {
+
+fun showDialog(context: Context?,
+               cancellable: Boolean,
+               animation: Int
+) {
     hideDialog()
     if (context != null) {
         try {
+            // Initialize the class
             customLoader = CustomLoader(context, animation)
+            //setting dialog properties
             customLoader?.let {
                 it.setCanceledOnTouchOutside(true)
-                it.setCancelable(cancelable)
+                it.setCancelable(cancellable)
                 it.show()
             }
 
@@ -21,6 +27,7 @@ fun showDialog(context: Context?, cancelable: Boolean, animation: Int) {
 }
 
 fun hideDialog() {
+    //dismissing the dialog
     if (customLoader != null && customLoader?.isShowing!!) {
         customLoader = try {
             customLoader?.dismiss()

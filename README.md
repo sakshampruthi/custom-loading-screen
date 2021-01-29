@@ -17,12 +17,21 @@ allprojects {
 	}
 }
 ```
+enable view-binding in your app/build.gradle (Module level):
+```groovy
+android {
+    ....
+    viewBinding {
+        enabled = true
+    }
+}
+```
 
 Add the dependencies in your app/build.gradle:
 ```groovy
 dependencies {
     ....
-    implementation 'com.github.sakshampruthi:custom-loading-screen:1.0"
+    implementation "com.github.sakshampruthi:custom-loading-screen:1.0.2"
 }
 ```
 
@@ -38,7 +47,7 @@ Next step is to call the ```showDialog()``` :
 ```kotlin
 showDialog(context,           //context or this
     true,                     //dismiss dialog onBackPressed
-    R.raw.<lottiejson>          //lottie file json stored in res/raw
+    R.raw.<lottiejson>        //lottie file json stored in res/raw
 )
 ```
 To dismiss the view:

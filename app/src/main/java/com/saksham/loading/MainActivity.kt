@@ -13,8 +13,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding.clickMe.setOnClickListener {
-            showDialog(this, true, R.raw.paperplane)
+            showDialog(this,
+                true,
+                R.raw.paperplane
+            )
+
         }
+        hideDialog()
 
     }
 }
