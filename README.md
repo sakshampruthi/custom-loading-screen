@@ -31,7 +31,7 @@ Add the dependencies in your app/build.gradle:
 ```groovy
 dependencies {
     ....
-    implementation "com.github.sakshampruthi:custom-loading-screen:1.15"
+    implementation "com.github.sakshampruthi:custom-loading-screen:1.16"
 }
 ```
 
@@ -54,7 +54,7 @@ showDialog(context,           //context or this
 
 For Java: 
 ```java
-Loader.showDialog(this,
+LoaderKt.showDialog(this,
                   true,
                   <lottiejson>
 )	
@@ -66,5 +66,5 @@ hideDialog()
 ```
 For Java:
 ```kotlin
-Loader.hideDialog()
+LoaderKt.hideDialog()
 ```
