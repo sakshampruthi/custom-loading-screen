@@ -1,7 +1,7 @@
 # Custom Loading Screen
 
 [![Version](https://jitpack.io/v/sakshampruthi/custom-loading-screen.svg)](https://jitpack.io/#sakshampruthi/custom-loading-screen)
-![MinApi](https://img.shields.io/badge/Min%20Api-23-important)
+![MinApi](https://img.shields.io/badge/Min%20Api-16-important)
 
 ----------------------------------------------------------
 
@@ -31,7 +31,7 @@ Add the dependencies in your app/build.gradle:
 ```groovy
 dependencies {
     ....
-    implementation "com.github.sakshampruthi:custom-loading-screen:1.0.2"
+    implementation "com.github.sakshampruthi:custom-loading-screen:1.15"
 }
 ```
 
@@ -42,7 +42,8 @@ Find one that suits you [here](https://lottiefiles.com/) and download the corres
 
 Place the json file in ```res->raw```
 
-Next step is to call the ```showDialog()``` :
+Next step is to call the ```showDialog()``` :  
+For kotlin: 
 
 ```kotlin
 showDialog(context,           //context or this
@@ -50,7 +51,20 @@ showDialog(context,           //context or this
     R.raw.<lottiejson>        //lottie file json stored in res/raw
 )
 ```
-To dismiss the view:
+
+For Java: 
+```java
+Loader.showDialog(this,
+                  true,
+                  <lottiejson>
+)	
+```
+To dismiss the view:  
+For kotlin:
 ```kotlin
 hideDialog()
+```
+For Java:
+```kotlin
+Loader.hideDialog()
 ```
