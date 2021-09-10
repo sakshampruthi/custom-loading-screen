@@ -7,7 +7,20 @@
 
 A simple library to generate custom loading screens using Lottie Files (till your application fetches data from server)
 
-### Adding dependencies
+### Adding dependencies  
+if your gradle version is 7.0 or above :  
+Add this to your settings.gradle (Project level):
+```groovy
+dependencyResolutionManagement {
+	repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+	repositories {
+		....
+		maven { url 'https://jitpack.io' }
+	}
+}
+```
+
+If your gradle version is below 7.0 : 
 Add this to your build.gradle (Project level):
 ```groovy
 allprojects {
